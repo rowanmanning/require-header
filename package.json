@@ -1,7 +1,6 @@
 {
     "name": "require-header",
     "version": "0.0.0",
-    "private": "true",
 
     "description": "Express/connect middleware to handle errors where an expected header is missing",
     "keywords": [ "400", "error", "express", "header", "http", "middleware" ],
