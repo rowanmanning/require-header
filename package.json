@@ -1,0 +1,36 @@
+{
+    "name": "require-header",
+    "version": "0.0.0",
+    "private": "true",
+
+    "description": "Express/connect middleware to handle errors where an expected header is missing",
+    "keywords": [ "400", "error", "express", "header", "http", "middleware" ],
+    "author": "Rowan Manning (http://rowanmanning.com/)",
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rowanmanning/require-header.git"
+    },
+    "homepage": "https://github.com/rowanmanning/require-header",
+    "bugs": "https://github.com/rowanmanning/require-header/issues",
+    "license": "MIT",
+
+    "engines": {
+        "node": ">=0.10"
+    },
+    "dependencies": {
+        "http-errors": "~1.2"
+    },
+    "devDependencies": {
+        "jshint": "~2.5",
+        "mocha": "~1.21",
+        "mockery": "~1.4",
+        "proclaim": "~2.0",
+        "sinon": "~1.10"
+    },
+
+    "main": "./lib/require-header.js",
+    "scripts": {
+        "test": "make test"
+    }
+}
