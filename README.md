@@ -102,7 +102,7 @@ Copyright &copy; 2015, Rowan Manning
 [info-build]: https://travis-ci.org/rowanmanning/require-header
 [shield-dependencies]: https://img.shields.io/gemnasium/rowanmanning/require-header.svg
 [shield-license]: https://img.shields.io/badge/license-MIT-blue.svg
-[shield-node]: https://img.shields.io/badge/node.js%20support-0.10–0.11-brightgreen.svg
+[shield-node]: https://img.shields.io/badge/node.js%20support-0.10–0.12-brightgreen.svg
 [shield-npm]: https://img.shields.io/npm/v/require-header.svg
 [shield-build]: https://img.shields.io/travis/rowanmanning/require-header/master.svg
 
