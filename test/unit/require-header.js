@@ -18,7 +18,7 @@ describe('require-header', function () {
         error400 = {status: 400};
         httpError = sinon.stub().returns(error400);
         mockery.registerMock('http-errors', httpError);
-        requireHeader = require('../lib/require-header');
+        requireHeader = require('../../lib/require-header');
     });
 
     afterEach(function () {
