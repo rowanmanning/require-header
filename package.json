@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "istanbul": "~0.3",
-    "jscs": "^2",
+    "jscs": "^3",
     "jshint": "^2",
     "mocha": "^2",
     "mockery": "~1.4",
