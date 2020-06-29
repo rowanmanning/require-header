@@ -22,7 +22,7 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "http-errors": "~1.3"
+    "http-errors": "~1.8"
   },
   "devDependencies": {
     "istanbul": "~0.3",
