@@ -31,7 +31,7 @@
     "mocha": "^2",
     "mockery": "~1.4",
     "proclaim": "^3",
-    "sinon": "^1"
+    "sinon": "^10"
   },
   "main": "./lib/require-header.js",
   "scripts": {
