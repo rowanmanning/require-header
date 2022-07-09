@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/rowanmanning/require-header/compare/v3.1.0...v3.1.1) (2022-07-09)
+
+
+### Bug Fixes
+
+* hide the misc changelog section ([0b6e391](https://github.com/rowanmanning/require-header/commit/0b6e391943d728bbf968c9f26c0fc9e0b8dce42e))
+
 ## [3.1.0](https://github.com/rowanmanning/require-header/compare/v3.0.1...v3.1.0) (2022-06-11)
 
 
