@@ -93,4 +93,10 @@ describe('lib/require-header', () => {
 
 	});
 
+	describe('.default', () => {
+		it('aliases the module exports', () => {
+			assert.strictEqual(requireHeader, requireHeader.default);
+		});
+	});
+
 });
