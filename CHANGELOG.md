@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.2](https://github.com/rowanmanning/require-header/compare/v3.1.1...v3.1.2) (2022-11-14)
+
+
+### Bug Fixes
+
+* improve TypeScript compatibility ([62aeeb4](https://github.com/rowanmanning/require-header/commit/62aeeb47b715da662ea237f2e19df03699e719a5))
+
 ## [3.1.1](https://github.com/rowanmanning/require-header/compare/v3.1.0...v3.1.1) (2022-07-09)
 
 
