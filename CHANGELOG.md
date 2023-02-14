@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.4](https://github.com/rowanmanning/require-header/compare/v3.1.3...v3.1.4) (2023-02-14)
+
+
+### Bug Fixes
+
+* support npm v9 ([3dd2ac7](https://github.com/rowanmanning/require-header/commit/3dd2ac73352074d828ca85d27ed4c340a601e95d))
+
 ## [3.1.3](https://github.com/rowanmanning/require-header/compare/v3.1.2...v3.1.3) (2023-01-08)
 
 
