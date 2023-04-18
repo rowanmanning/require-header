@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/rowanmanning/require-header/compare/v4.0.0...v4.0.1) (2023-04-18)
+
+
+### Bug Fixes
+
+* add support for Node.js 20 ([db7f91d](https://github.com/rowanmanning/require-header/commit/db7f91ddcea8cf92af9449018a870f1bccf620e4))
+
 ## [4.0.0](https://github.com/rowanmanning/require-header/compare/v3.1.4...v4.0.0) (2023-03-25)
 
 
