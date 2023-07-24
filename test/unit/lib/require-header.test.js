@@ -1,17 +1,11 @@
 'use strict';
 
 const {assert} = require('chai');
-const td = require('testdouble');
 
 describe('lib/require-header', () => {
-	let error400;
-	let httpError;
 	let requireHeader;
 
 	beforeEach(() => {
-		httpError = td.replace('http-errors', td.func());
-		error400 = {status: 400};
-		td.when(httpError(), {ignoreExtraArgs: true}).thenReturn(error400);
 		requireHeader = require('../../../lib/require-header');
 	});
 
@@ -60,16 +54,20 @@ describe('lib/require-header', () => {
 
 				it('calls back with a 400 error', done => {
 					requireHeader('foo')(request, response, error => {
-						assert.strictEqual(error, error400);
-						td.verify(httpError(400, 'foo header is required'), {times: 1});
+						assert.ok(error instanceof Error);
+						assert.strictEqual(error.status, 400);
+						assert.strictEqual(error.statusCode, 400);
+						assert.strictEqual(error.message, 'foo header is required');
 						done();
 					});
 				});
 
 				it('calls back with a 400 error with a custom message if specified', done => {
 					requireHeader('foo', 'bar')(request, response, error => {
-						assert.strictEqual(error, error400);
-						td.verify(httpError(400, 'bar'), {times: 1});
+						assert.ok(error instanceof Error);
+						assert.strictEqual(error.status, 400);
+						assert.strictEqual(error.statusCode, 400);
+						assert.strictEqual(error.message, 'bar');
 						done();
 					});
 				});
@@ -81,8 +79,10 @@ describe('lib/require-header', () => {
 				it('calls back with a 400 error', done => {
 					request.headers.foo = '';
 					requireHeader('foo')(request, response, error => {
-						assert.strictEqual(error, error400);
-						td.verify(httpError(400, 'foo header is required'), {times: 1});
+						assert.ok(error instanceof Error);
+						assert.strictEqual(error.status, 400);
+						assert.strictEqual(error.statusCode, 400);
+						assert.strictEqual(error.message, 'foo header is required');
 						done();
 					});
 				});
