@@ -1,6 +1,6 @@
 'use strict';
 
-const {assert} = require('chai');
+const assert = require('node:assert');
 
 describe('lib/require-header', () => {
 	let requireHeader;
@@ -10,13 +10,13 @@ describe('lib/require-header', () => {
 	});
 
 	it('is a function', () => {
-		assert.isFunction(requireHeader);
+		assert.strictEqual(typeof requireHeader, 'function');
 	});
 
 	describe('requireHeader(header)', () => {
 
 		it('returns a function', () => {
-			assert.isFunction(requireHeader());
+			assert.strictEqual(typeof requireHeader(), 'function');
 		});
 
 		describe('middleware(request, response, next)', () => {
@@ -35,7 +35,7 @@ describe('lib/require-header', () => {
 				it('does not callback with an error', done => {
 					request.headers.foo = 'bar';
 					requireHeader('foo')(request, response, error => {
-						assert.isUndefined(error);
+						assert.strictEqual(error, undefined);
 						done();
 					});
 				});
@@ -43,7 +43,7 @@ describe('lib/require-header', () => {
 				it('ignores case in the required header', done => {
 					request.headers.foo = 'bar';
 					requireHeader('FOO')(request, response, error => {
-						assert.isUndefined(error);
+						assert.strictEqual(error, undefined);
 						done();
 					});
 				});
