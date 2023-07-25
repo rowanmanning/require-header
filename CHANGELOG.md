@@ -3,40 +3,9 @@
 ## 4.0.3 (2023-07-25)
 
 
-### ⚠ BREAKING CHANGES
-
-* drop official support for npm v7
-* drop support for Node.js 14
-* drop support for Node.js versions below 14
-* mocha no longer supports Node.js v12
-
-### Features
-
-* ensure typescript types are always valid ([fbc2921](https://github.com/rowanmanning/require-header/commit/fbc2921744f0dc414e3119b203e569cc173f3cae))
-
-
 ### Bug Fixes
 
-* add support for Node.js 20 ([db7f91d](https://github.com/rowanmanning/require-header/commit/db7f91ddcea8cf92af9449018a870f1bccf620e4))
-* bump json5 from 2.2.1 to 2.2.3 ([9b52cd6](https://github.com/rowanmanning/require-header/commit/9b52cd68e26e695fa2646b481610a35053b0ee87))
-* hide the misc changelog section ([0b6e391](https://github.com/rowanmanning/require-header/commit/0b6e391943d728bbf968c9f26c0fc9e0b8dce42e))
-* improve TypeScript compatibility ([62aeeb4](https://github.com/rowanmanning/require-header/commit/62aeeb47b715da662ea237f2e19df03699e719a5))
-* remove http-errors dependency ([4d416de](https://github.com/rowanmanning/require-header/commit/4d416deb655ba34e2d9b8a8252e549cb33122bfc))
-* sort out broken releases ([9e1e29c](https://github.com/rowanmanning/require-header/commit/9e1e29c2a4771078eecb7a4d0238e9be608c2f7b))
-* support npm v9 ([3dd2ac7](https://github.com/rowanmanning/require-header/commit/3dd2ac73352074d828ca85d27ed4c340a601e95d))
-
-
-### Documentation Changes
-
-* manually define changelog sections ([60673cf](https://github.com/rowanmanning/require-header/commit/60673cf43615d7e682fe5534adeb111e79ded505))
-
-
-### Miscellaneous
-
-* bump mocha from 9.2.2 to 10.0.0 ([0114d0f](https://github.com/rowanmanning/require-header/commit/0114d0fb74a919888db66e2aacec7a45c2bd72a7))
-* drop official support for npm v7 ([3570f24](https://github.com/rowanmanning/require-header/commit/3570f245a9ff3801c55e2b61a76fe33bd62515d0))
-* drop support for Node.js 14 ([4f2cb39](https://github.com/rowanmanning/require-header/commit/4f2cb399932fe54f4870b3f430ea1c607beeb944))
-* drop support for Node.js versions below 14 ([9821a9d](https://github.com/rowanmanning/require-header/commit/9821a9d7da1351dba4210ec713ddc81643941475))
+* sort out broken releases
 
 ## [4.0.1](https://github.com/rowanmanning/require-header/compare/v4.0.0...v4.0.1) (2023-04-18)
 
