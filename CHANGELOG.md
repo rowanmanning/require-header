@@ -1,5 +1,16 @@
 # Changelog
 
+## [5.0.0](https://github.com/rowanmanning/require-header/compare/v4.0.3...v5.0.0) (2023-09-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for Node.js 16
+
+### Miscellaneous
+
+* drop support for Node.js 16 ([6802a1f](https://github.com/rowanmanning/require-header/commit/6802a1f266a4ca2476fdb6797d28049f2f301482))
+
 ## 4.0.3 (2023-07-25)
 
 
