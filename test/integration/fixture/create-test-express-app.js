@@ -1,6 +1,5 @@
 'use strict';
 
-const httpRequest = require('axios');
 const requireHeader = require('../../..');
 
 module.exports = async function createTestExpressApp(expressModule) {
@@ -39,17 +38,12 @@ module.exports = async function createTestExpressApp(expressModule) {
 	 *     The path to make a request to.
 	 * @param {object} headers
 	 *     HTTP headers to send with the request.
-	 * @returns {httpRequest.AxiosResponse}
+	 * @returns {Response}
 	 *     Returns an HTTP response object.
 	 */
 	function get(requestPath, headers = {}) {
-		return httpRequest({
-			url: `${address}${requestPath}`,
-			headers,
-			validateStatus() {
-				return true;
-			}
-		});
+		const url = new URL(requestPath, address);
+		return fetch(url, {headers});
 	}
 
 	// Return the methods that we need

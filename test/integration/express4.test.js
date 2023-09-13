@@ -30,10 +30,12 @@ describe('Express 4', () => {
 	});
 
 	describe('GET / without required header', () => {
+		let body;
 		let response;
 
 		beforeEach(async () => {
 			response = await app.get('/');
+			body = await response.text();
 		});
 
 		it('responds with a 400 status', () => {
@@ -41,18 +43,20 @@ describe('Express 4', () => {
 		});
 
 		it('outputs the error message', () => {
-			assert.strictEqual(response.data, 'mock-header header is required');
+			assert.strictEqual(body, 'mock-header header is required');
 		});
 
 	});
 
 	describe('GET / without empty required header', () => {
+		let body;
 		let response;
 
 		beforeEach(async () => {
 			response = await app.get('/', {
 				'mock-header': ''
 			});
+			body = await response.text();
 		});
 
 		it('responds with a 400 status', () => {
@@ -60,7 +64,7 @@ describe('Express 4', () => {
 		});
 
 		it('outputs the error message', () => {
-			assert.strictEqual(response.data, 'mock-header header is required');
+			assert.strictEqual(body, 'mock-header header is required');
 		});
 
 	});
