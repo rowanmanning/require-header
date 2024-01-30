@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.0](https://github.com/rowanmanning/require-header/compare/v5.0.0...v5.1.0) (2024-01-30)
+
+
+### Features
+
+* add official support for npm 10 ([c1f31e6](https://github.com/rowanmanning/require-header/commit/c1f31e6a07db85c85fd482f368fae0a92e8e70f6))
+
 ## [5.0.0](https://github.com/rowanmanning/require-header/compare/v4.0.3...v5.0.0) (2023-09-11)
 
 
