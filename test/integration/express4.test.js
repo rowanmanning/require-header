@@ -26,7 +26,6 @@ describe('Express 4', () => {
 		it('responds with a 200 status', () => {
 			assert.strictEqual(response.status, 200);
 		});
-
 	});
 
 	describe('GET / without required header', () => {
@@ -45,7 +44,6 @@ describe('Express 4', () => {
 		it('outputs the error message', () => {
 			assert.strictEqual(body, 'mock-header header is required');
 		});
-
 	});
 
 	describe('GET / without empty required header', () => {
@@ -66,7 +64,5 @@ describe('Express 4', () => {
 		it('outputs the error message', () => {
 			assert.strictEqual(body, 'mock-header header is required');
 		});
-
 	});
-
 });
