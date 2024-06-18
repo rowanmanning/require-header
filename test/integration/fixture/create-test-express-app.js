@@ -9,13 +9,13 @@ module.exports = async function createTestExpressApp(expressModule) {
 	const app = express();
 
 	// Add a route which requires a header
-	app.all('/', requireHeader('mock-header'), (request, response) => {
+	app.all('/', requireHeader('mock-header'), (_request, response) => {
 		response.status(200);
 		response.send('OK');
 	});
 
 	// eslint-disable-next-line no-unused-vars
-	app.use((error, request, response, next) => {
+	app.use((error, _request, response, _next) => {
 		response.status(error.status || 500);
 		response.send(error.message);
 	});
@@ -43,7 +43,7 @@ module.exports = async function createTestExpressApp(expressModule) {
 	 */
 	function get(requestPath, headers = {}) {
 		const url = new URL(requestPath, address);
-		return fetch(url, {headers});
+		return fetch(url, { headers });
 	}
 
 	// Return the methods that we need
@@ -63,7 +63,7 @@ module.exports = async function createTestExpressApp(expressModule) {
  */
 function start(app) {
 	return new Promise((resolve, reject) => {
-		const server = app.listen(undefined, error => {
+		const server = app.listen(undefined, (error) => {
 			if (error) {
 				return reject(error);
 			}

@@ -14,7 +14,6 @@ describe('lib/require-header', () => {
 	});
 
 	describe('requireHeader(header)', () => {
-
 		it('returns a function', () => {
 			assert.strictEqual(typeof requireHeader(), 'function');
 		});
@@ -31,29 +30,26 @@ describe('lib/require-header', () => {
 			});
 
 			describe('when header is present', () => {
-
-				it('does not callback with an error', done => {
+				it('does not callback with an error', (done) => {
 					request.headers.foo = 'bar';
-					requireHeader('foo')(request, response, error => {
+					requireHeader('foo')(request, response, (error) => {
 						assert.strictEqual(error, undefined);
 						done();
 					});
 				});
 
-				it('ignores case in the required header', done => {
+				it('ignores case in the required header', (done) => {
 					request.headers.foo = 'bar';
-					requireHeader('FOO')(request, response, error => {
+					requireHeader('FOO')(request, response, (error) => {
 						assert.strictEqual(error, undefined);
 						done();
 					});
 				});
-
 			});
 
 			describe('when header is not present', () => {
-
-				it('calls back with a 400 error', done => {
-					requireHeader('foo')(request, response, error => {
+				it('calls back with a 400 error', (done) => {
+					requireHeader('foo')(request, response, (error) => {
 						assert.ok(error instanceof Error);
 						assert.strictEqual(error.status, 400);
 						assert.strictEqual(error.statusCode, 400);
@@ -62,8 +58,8 @@ describe('lib/require-header', () => {
 					});
 				});
 
-				it('calls back with a 400 error with a custom message if specified', done => {
-					requireHeader('foo', 'bar')(request, response, error => {
+				it('calls back with a 400 error with a custom message if specified', (done) => {
+					requireHeader('foo', 'bar')(request, response, (error) => {
 						assert.ok(error instanceof Error);
 						assert.strictEqual(error.status, 400);
 						assert.strictEqual(error.statusCode, 400);
@@ -71,14 +67,12 @@ describe('lib/require-header', () => {
 						done();
 					});
 				});
-
 			});
 
 			describe('when header is present but empty', () => {
-
-				it('calls back with a 400 error', done => {
+				it('calls back with a 400 error', (done) => {
 					request.headers.foo = '';
-					requireHeader('foo')(request, response, error => {
+					requireHeader('foo')(request, response, (error) => {
 						assert.ok(error instanceof Error);
 						assert.strictEqual(error.status, 400);
 						assert.strictEqual(error.statusCode, 400);
@@ -86,11 +80,8 @@ describe('lib/require-header', () => {
 						done();
 					});
 				});
-
 			});
-
 		});
-
 	});
 
 	describe('.default', () => {
@@ -98,5 +89,4 @@ describe('lib/require-header', () => {
 			assert.strictEqual(requireHeader, requireHeader.default);
 		});
 	});
-
 });
