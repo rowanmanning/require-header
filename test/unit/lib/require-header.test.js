@@ -1,6 +1,7 @@
 'use strict';
 
 const assert = require('node:assert');
+const { beforeEach, describe, it } = require('node:test');
 
 describe('lib/require-header', () => {
 	let requireHeader;
@@ -30,7 +31,7 @@ describe('lib/require-header', () => {
 			});
 
 			describe('when header is present', () => {
-				it('does not callback with an error', (done) => {
+				it('does not callback with an error', (_, done) => {
 					request.headers.foo = 'bar';
 					requireHeader('foo')(request, response, (error) => {
 						assert.strictEqual(error, undefined);
@@ -38,7 +39,7 @@ describe('lib/require-header', () => {
 					});
 				});
 
-				it('ignores case in the required header', (done) => {
+				it('ignores case in the required header', (_, done) => {
 					request.headers.foo = 'bar';
 					requireHeader('FOO')(request, response, (error) => {
 						assert.strictEqual(error, undefined);
@@ -48,7 +49,7 @@ describe('lib/require-header', () => {
 			});
 
 			describe('when header is not present', () => {
-				it('calls back with a 400 error', (done) => {
+				it('calls back with a 400 error', (_, done) => {
 					requireHeader('foo')(request, response, (error) => {
 						assert.ok(error instanceof Error);
 						assert.strictEqual(error.status, 400);
@@ -58,7 +59,7 @@ describe('lib/require-header', () => {
 					});
 				});
 
-				it('calls back with a 400 error with a custom message if specified', (done) => {
+				it('calls back with a 400 error with a custom message if specified', (_, done) => {
 					requireHeader('foo', 'bar')(request, response, (error) => {
 						assert.ok(error instanceof Error);
 						assert.strictEqual(error.status, 400);
@@ -70,7 +71,7 @@ describe('lib/require-header', () => {
 			});
 
 			describe('when header is present but empty', () => {
-				it('calls back with a 400 error', (done) => {
+				it('calls back with a 400 error', (_, done) => {
 					request.headers.foo = '';
 					requireHeader('foo')(request, response, (error) => {
 						assert.ok(error instanceof Error);
