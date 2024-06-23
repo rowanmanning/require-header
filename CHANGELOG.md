@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.0](https://github.com/rowanmanning/require-header/compare/v5.1.0...v5.2.0) (2024-06-23)
+
+
+### Features
+
+* add Node.js 22 support ([b6f4faa](https://github.com/rowanmanning/require-header/commit/b6f4faaa710352f542b6f2a758ce3545a694b03b))
+
 ## [5.1.0](https://github.com/rowanmanning/require-header/compare/v5.0.0...v5.1.0) (2024-01-30)
 
 
