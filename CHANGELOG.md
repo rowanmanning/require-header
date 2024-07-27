@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.1](https://github.com/rowanmanning/require-header/compare/v5.2.0...v5.2.1) (2024-07-27)
+
+
+### Bug Fixes
+
+* prevent husky from failing ([56ca55e](https://github.com/rowanmanning/require-header/commit/56ca55e6f3d4f4fe3436779ce13a5fa0d9ad5736))
+
 ## [5.2.0](https://github.com/rowanmanning/require-header/compare/v5.1.0...v5.2.0) (2024-06-23)
 
 
