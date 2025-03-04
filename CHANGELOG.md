@@ -1,5 +1,16 @@
 # Changelog
 
+## [6.0.0](https://github.com/rowanmanning/require-header/compare/v5.2.1...v6.0.0) (2025-03-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop Node.js 18
+
+### Miscellaneous Chores
+
+* drop Node.js 18 ([4a31b37](https://github.com/rowanmanning/require-header/commit/4a31b3707dba57f7b47c2117aba3be1bbe232685))
+
 ## [5.2.1](https://github.com/rowanmanning/require-header/compare/v5.2.0...v5.2.1) (2024-07-27)
 
 
