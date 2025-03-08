@@ -1,6 +1,6 @@
 {
   "name": "require-header",
-  "version": "5.2.1",
+  "version": "6.0.0",
   "description": "Express/connect middleware to handle errors where an expected header is missing",
   "keywords": [
     "400",
