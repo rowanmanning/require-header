@@ -3,11 +3,11 @@
 const assert = require('node:assert');
 const { beforeEach, describe, it } = require('node:test');
 
-describe('lib/require-header', () => {
+describe('require-header', () => {
 	let requireHeader;
 
 	beforeEach(() => {
-		requireHeader = require('../../../lib/require-header');
+		requireHeader = require('../..');
 	});
 
 	it('is a function', () => {
