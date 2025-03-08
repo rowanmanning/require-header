@@ -24,7 +24,7 @@ This library requires the following to run:
 Install with [npm](https://www.npmjs.com/):
 
 ```sh
-npm install allow-methods
+npm install require-header
 ```
 
 Load the library into your code with a `require` call:
