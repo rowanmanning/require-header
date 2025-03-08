@@ -1,7 +1,10 @@
 'use strict';
 
 class BadRequestError extends Error {
-	/** @type {string} */
+	/**
+	 * @override
+	 * @type {string}
+	 */
 	name = 'BadRequestError';
 
 	/** @type {number} */
@@ -31,5 +34,6 @@ function requireHeader(header, message = `${header} header is required`) {
 	};
 }
 
+/** @type {requireHeader} */
 module.exports = requireHeader;
 module.exports.default = module.exports;
