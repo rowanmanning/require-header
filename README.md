@@ -30,7 +30,7 @@ npm install allow-methods
 Load the library into your code with a `require` call:
 
 ```js
-const requireHeader = require('require-header');
+const { requireHeader } = require('require-header');
 ```
 
 `requireHeader` will return a middleware function that will error if the request does not set the given header. The error will have `message` and `status` properties which you can use.

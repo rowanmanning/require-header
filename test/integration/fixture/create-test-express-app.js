@@ -1,6 +1,6 @@
 'use strict';
 
-const requireHeader = require('../../..');
+const { requireHeader } = require('../../..');
 
 module.exports = async function createTestExpressApp(expressModule) {
 	const express = require(expressModule);

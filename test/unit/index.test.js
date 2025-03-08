@@ -7,7 +7,7 @@ describe('require-header', () => {
 	let requireHeader;
 
 	beforeEach(() => {
-		requireHeader = require('../..');
+		requireHeader = require('../..').requireHeader;
 	});
 
 	it('is a function', () => {
@@ -82,12 +82,6 @@ describe('require-header', () => {
 					});
 				});
 			});
-		});
-	});
-
-	describe('.default', () => {
-		it('aliases the module exports', () => {
-			assert.strictEqual(requireHeader, requireHeader.default);
 		});
 	});
 });

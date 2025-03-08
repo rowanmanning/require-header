@@ -25,15 +25,11 @@ class BadRequestError extends Error {
  * @returns {import('express').Handler}
  *     Returns a middleware function.
  */
-function requireHeader(header, message = `${header} header is required`) {
+exports.requireHeader = function requireHeader(header, message = `${header} header is required`) {
 	return (request, _response, next) => {
 		if (!request.headers[header.toLowerCase()]) {
 			return next(new BadRequestError(message));
 		}
 		next();
 	};
-}
-
-/** @type {requireHeader} */
-module.exports = requireHeader;
-module.exports.default = module.exports;
+};
