@@ -3,13 +3,13 @@
 
 Express middleware to handle errors where an expected header is missing.
 
-
-## Table of Contents
-
-  * [Requirements](#requirements)
-  * [Usage](#usage)
-  * [Contributing](#contributing)
-  * [License](#license)
+* [Requirements](#requirements)
+* [Usage](#usage)
+  * [Route-level](#route-level)
+  * [Application-level](#application-level)
+* [Migration](#migration)
+* [Contributing](#contributing)
+* [License](#license)
 
 
 ## Requirements
@@ -76,6 +76,11 @@ const app = express();
 // Require a User-Agent header across the entire application
 app.use(requireHeader('User-Agent'));
 ```
+
+
+## Migration
+
+A new major version of this project is released if breaking changes are introduced. We maintain a [migration guide](docs/migration.md) to help users migrate between these versions.
 
 
 ## Contributing
