@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.1.0](https://github.com/rowanmanning/require-header/compare/v6.0.0...v6.1.0) (2025-05-21)
+
+
+### Features
+
+* add Node.js 24 support ([7d2ca92](https://github.com/rowanmanning/require-header/commit/7d2ca92c11d3e4f401f818647513466100a22a21))
+
 ## [6.0.0](https://github.com/rowanmanning/require-header/compare/v5.2.1...v6.0.0) (2025-03-08)
 
 
