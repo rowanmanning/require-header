@@ -16,7 +16,7 @@ Express middleware to handle errors where an expected header is missing.
 
 This library requires the following to run:
 
-  * [Node.js](https://nodejs.org/) 20+
+  * [Node.js](https://nodejs.org/) 22+
 
 
 ## Usage
